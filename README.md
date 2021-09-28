@@ -22,3 +22,5 @@ INSERT INTO [dbo].[Produto] ([Id], [nome], [categoria], [preco], [quantidade]) V
 INSERT INTO [dbo].[Produto] ([Id], [nome], [categoria], [preco], [quantidade]) VALUES (8, N'prduto 2.1', N'categoria2', CAST(5.00 AS Decimal(12, 2)), 3)
 INSERT INTO [dbo].[Produto] ([Id], [nome], [categoria], [preco], [quantidade]) VALUES (9, N'prduto 1.3', N'categoria1', CAST(2.00 AS Decimal(12, 2)), 3)
 INSERT INTO [dbo].[Produto] ([Id], [nome], [categoria], [preco], [quantidade]) VALUES (10, N'asdasd', N'categoria1', CAST(2.00 AS Decimal(12, 2)), 20)
+
+####Code Blocks (Indented style)
