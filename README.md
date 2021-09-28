@@ -1,12 +1,12 @@
 # ProjetoTDSA
 testeProjTDSA
-	CREATE TABLE [dbo].[Produto] (
-    [Id]         INT             IDENTITY (1, 1) NOT NULL,
-    [nome]       NCHAR (100)     NOT NULL,
-    [categoria]  NCHAR (100)     NULL,
-    [preco]      NUMERIC (12, 2) NULL,
-    [quantidade] INT             NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC));
+    	CREATE TABLE [dbo].[Produto] (
+	[Id]         INT             IDENTITY (1, 1) NOT NULL,
+	[nome]       NCHAR (100)     NOT NULL,
+    	[categoria]  NCHAR (100)     NULL,
+    	[preco]      NUMERIC (12, 2) NULL,
+    	[quantidade] INT             NULL,
+    	PRIMARY KEY CLUSTERED ([Id] ASC));
 
 
 
