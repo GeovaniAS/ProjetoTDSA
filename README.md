@@ -1,13 +1,12 @@
 # ProjetoTDSA
 testeProjTDSA
-    	CREATE TABLE [dbo].[Produto] (
+    		CREATE TABLE [dbo].[Produto] (
 	[Id]         INT             IDENTITY (1, 1) NOT NULL,
 	[nome]       NCHAR (100)     NOT NULL,
-    	[categoria]  NCHAR (100)     NULL,
-    	[preco]      NUMERIC (12, 2) NULL,
-    	[quantidade] INT             NULL,
-    	PRIMARY KEY CLUSTERED ([Id] ASC));
-
+    [categoria]  NCHAR (100)     NULL,
+    [preco]      NUMERIC (12, 2) NULL,
+    [quantidade] INT             NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC));
 
 
 	INSERT INTO [dbo].[Produto] ([Id], [nome], [categoria], [preco], [quantidade]) VALUES (1, N'produto1.1', N'categoria1', CAST(2.00 AS Decimal(12, 2)), 5)
