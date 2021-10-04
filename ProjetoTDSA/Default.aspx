@@ -13,21 +13,26 @@
     <div class="jumbotron">
         <asp:Label ID="LblNome" runat="server" Text="Nome"></asp:Label>
         <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
-        <asp:Label ID="lblCategoria" runat="server" Text="Categoria"></asp:Label>
-        <asp:DropDownList ID="drlCategoria" runat="server">
+        
+        <asp:Label ID="lblCategoria" runat="server" Text="Categoria" margin-right=-1px></asp:Label>
+        <asp:DropDownList ID="drlCategoria" runat="server" margin-right=-1px>
+       
             <asp:ListItem Text="" Value=""/>
             <asp:ListItem Text="Categoria1" Value="categoria1"/>
             <asp:ListItem Text="Categoria2" Value="categoria2"/>
             <asp:ListItem Text="Categoria3" Value="categoria3"/>
         </asp:DropDownList>
+          
+        <br>
         <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade:"></asp:Label>
         <asp:TextBox ID="txtQuantidade" runat="server"></asp:TextBox>
         <asp:Label ID="lblPreco" runat="server" Text="Preço:"></asp:Label>
         <asp:TextBox ID="txtPreco" runat="server"></asp:TextBox>
+        <br>
         <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar:" OnClick="btnPesquisar_Click"/>
         <asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="btnLimpar_Click" />
         <asp:Button ID="btnInserir" runat="server" Text="Inserir"  OnClick="btnInserir_Click" />
-        <asp:GridView ID="gvwProduto" runat="server" CellPadding="1" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" Height="60%" Width="50%" AllowPaging="True" PageSize="5" AutoGenerateColumns="False" UseAccessibleHeader="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" AllowSorting="True" HorizontalAlign="Center" >
+        <asp:GridView ID="gvwProduto" runat="server" CellPadding="1" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" Height="60%" Width="50%" AllowPaging="True" PageSize="5" AutoGenerateColumns="False" UseAccessibleHeader="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" AllowSorting="True" HorizontalAlign="Center" OnDataBound="AtualizaValor" >
             <AlternatingRowStyle BackColor="#CCCCCC" />
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -52,9 +57,10 @@
                     </asp:TemplateField>
             </Columns>
         </asp:GridView>
+        <div align="right">
         <asp:Label ID="lblTotal" runat="server" Text="Valor Total:"></asp:Label>
-        <asp:TextBox ID="txtTotal" runat="server" Height="16px">asd</asp:TextBox>
-
+        <asp:TextBox ID="txtTotal" runat="server" Height="16px" CausesValidation="True" Enabled="False" ReadOnly="True"></asp:TextBox>
+        </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" 
             DeleteCommand="DELETE FROM [Produto] WHERE [Id] = @Id" 
             SelectCommand="SELECT * FROM [Produto]" 

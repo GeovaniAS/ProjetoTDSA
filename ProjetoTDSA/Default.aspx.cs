@@ -15,7 +15,7 @@ namespace ProjetoTDSA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            AtualizaValor();
+            
 
         }
         private DataSet commandSql(string sqltxt)
@@ -97,7 +97,7 @@ namespace ProjetoTDSA
 
 
         }
-        protected void AtualizaValor()
+        protected void AtualizaValor(object sender, EventArgs e)
         {
             decimal ValorTotal = 0;
 
